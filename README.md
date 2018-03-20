@@ -52,4 +52,4 @@ Transfrom VOC Format
 			<ymax>78</ymax>
 		</bndbox>
 	</object>
-</annotation>
+'</annotation>'
