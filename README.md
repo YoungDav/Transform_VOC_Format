@@ -1,4 +1,4 @@
-### This tools help you to transfrom annotation format to VOC2007 format 
+### This tools help you to transfrom annotation format to VOC2007 format used for py-faster-rcnn
 
 ANNOTATION FORMAT:  
 {  
