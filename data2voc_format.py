@@ -82,7 +82,6 @@ def dict_to_xml(key, value, datadir, xml_path):
 dict_to_xml('detection_test.jpg', [[1,2,3,4,'pn']], '../data', 'test.xml')
 
 def main():
-
     datadir = 'PATH OF IMGDIR'
     json_path = 'PATH SAVE ANNOTATION'
     xml_dir = 'PATH SAVE OUTPUT XML'
@@ -90,10 +89,13 @@ def main():
     json_ = json.loads(open(json_path).read())
 
     for key in json_.keys():
-        xml_name = key.split('.'/)[-1].split('.')[0] + '.xml'
+        xml_name = key.split('/')[-1].split('.')[0] + '.xml'
         xml_path = os.path.join(xml_dir, xml_name)
         value = json_[key]
         dict_to_xml(key, value, datadir, xml_path)
 
 def test():
-    dict_to_xml('demo.jpg', [[10, 20, 40, 50, 'cat'], [10, 20, 40, 50, 'dong']], 'VOC2018', 'demo.xml')
+    dict_to_xml('xiaohuangren.jpg', [[10, 20, 40, 50, 'person'], [10, 20, 40, 50, 'person']], 'VOC2018', 'xiaohuangren.xml')
+
+if __name__ == '__main__':
+    test()
